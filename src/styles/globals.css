@@ -1,0 +1,71 @@
+@import './tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: var(--line);
+  }
+  
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0A0A0A;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #232a27;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3DDBA5;
+  }
+}
+
+/* Subtle Film Grain Noise Overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Neo-brutalist Mint Highlight phrase */
+.mint-highlight {
+  display: inline-block;
+  background-color: #3DDBA5;
+  color: #0A0A0A;
+  padding: 0.1em 0.35em;
+  border-radius: 0.25rem;
+  font-weight: 800;
+  transform: rotate(-1.2deg);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Radial Mint Spotlight for Hero */
+.hero-spotlight {
+  background: radial-gradient(circle at 50% 0%, rgba(61, 219, 165, 0.15) 0%, rgba(10, 10, 10, 0) 70%);
+}
+
+/* Accessible focus ring */
+*:focus-visible {
+  outline: 2px solid #3DDBA5;
+  outline-offset: 2px;
+}
+

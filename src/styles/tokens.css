@@ -1,0 +1,13 @@
+:root {
+  --bg: #0A0A0A;
+  --surface: #111413;
+  --surface-2: #16201D;
+  --text: #FFFFFF;
+  --muted: #8A8F8C;
+  --mint: #3DDBA5;
+  --yellow: #F5C230;
+  --blue: #45B5F5;
+  --pink: #FF5C8D;
+  --line: rgba(255, 255, 255, 0.08);
+}
+
